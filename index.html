@@ -41,6 +41,7 @@
         scene.add(light);
 
         const lDrawLoader = new LDrawLoader();
+        lDrawLoader.smoothNormals = false; // <-- Fix the problem with displaying black parts
 
         lDrawLoader.load('./street.ldr_Packed.mpd', function (groupStreet) {
             let street = LDrawUtils.mergeObject(groupStreet);
